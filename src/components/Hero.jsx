@@ -141,11 +141,15 @@ export default function Hero() {
           </Link>
 
 
-          <button
-            className="hero-secondary"
+          {/* RESUME DOWNLOAD */}
+
+          <a
+            href="/Jugal-Pakhare-Resume.pdf"
+            download="Jugal-Pakhare-Resume.pdf"
+            className="secondary resume-button"
           >
-            📄 Resume
-          </button>
+            📄 Download Resume
+          </a>
 
         </motion.div>
 

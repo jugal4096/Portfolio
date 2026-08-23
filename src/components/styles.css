@@ -972,3 +972,6 @@ img {
     height: 42px;
   }
 }
+.hamburger span {
+  background-color: #ffffff !important;
+}
