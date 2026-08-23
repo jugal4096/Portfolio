@@ -1,0 +1,1526 @@
+/* =========================================================
+   EDUCATION PAGE
+========================================================= */
+
+.education-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 145px 6% 110px;
+  overflow: hidden;
+  isolation: isolate;
+
+  color: #f5f7ff;
+  background: #020713;
+
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.education-background {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  pointer-events: none;
+}
+
+.education-background-image {
+  position: absolute;
+  inset: 0;
+
+  background-image: var(--education-bg);
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0.23;
+
+  transform: scale(1.05);
+
+  animation: backgroundFloat 14s ease-in-out infinite;
+}
+
+@keyframes backgroundFloat {
+  0%,
+  100% {
+    transform: scale(1.05);
+  }
+
+  50% {
+    transform: scale(1.09);
+  }
+}
+
+.education-background-dark {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(0, 229, 255, 0.06),
+      transparent 45%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(2, 7, 19, 0.72),
+      rgba(2, 7, 19, 0.88) 55%,
+      rgba(2, 7, 19, 0.97)
+    );
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.education-grid {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.1;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 229, 255, 0.14) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 229, 255, 0.14) 1px,
+      transparent 1px
+    );
+
+  background-size: 55px 55px;
+
+  animation: moveGrid 22s linear infinite;
+}
+
+@keyframes moveGrid {
+  to {
+    background-position: 55px 55px;
+  }
+}
+
+
+/* =========================================================
+   AURORA
+========================================================= */
+
+.aurora {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  filter: blur(140px);
+
+  opacity: 0.12;
+
+  animation: auroraMove 9s ease-in-out infinite;
+}
+
+.aurora-one {
+  top: -200px;
+  left: -160px;
+
+  background: #00e5ff;
+}
+
+.aurora-two {
+  right: -180px;
+  bottom: -150px;
+
+  background: #9d5cff;
+
+  animation-delay: 3s;
+}
+
+@keyframes auroraMove {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(25px, -20px);
+  }
+}
+
+
+/* =========================================================
+   FLOATING DATA
+========================================================= */
+
+.data-chip {
+  position: absolute;
+
+  padding: 8px 13px;
+
+  border: 1px solid rgba(0, 229, 255, 0.16);
+
+  border-radius: 9px;
+
+  background: rgba(3, 10, 25, 0.58);
+
+  color: rgba(0, 229, 255, 0.65);
+
+  backdrop-filter: blur(12px);
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 1px;
+
+  box-shadow:
+    0 0 25px rgba(0, 229, 255, 0.03);
+
+  animation: chipFloat 5s ease-in-out infinite;
+}
+
+.chip-one {
+  top: 30%;
+  left: 4%;
+}
+
+.chip-two {
+  top: 25%;
+  right: 4%;
+
+  animation-delay: 1s;
+}
+
+.chip-three {
+  bottom: 20%;
+  left: 5%;
+
+  animation-delay: 2s;
+}
+
+.chip-four {
+  bottom: 27%;
+  right: 5%;
+
+  animation-delay: 3s;
+}
+
+@keyframes chipFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.education-hero {
+  position: relative;
+  z-index: 5;
+
+  max-width: 900px;
+
+  margin: 0 auto 85px;
+
+  text-align: center;
+}
+
+.education-kicker {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 9px 16px;
+
+  border: 1px solid rgba(0, 229, 255, 0.18);
+
+  border-radius: 30px;
+
+  background: rgba(0, 229, 255, 0.05);
+
+  color: #8794aa;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  backdrop-filter: blur(15px);
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #14f195;
+
+  box-shadow: 0 0 15px #14f195;
+
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.4;
+    transform: scale(0.7);
+  }
+}
+
+.education-hero h1 {
+  margin-top: 28px;
+
+  font-size: clamp(4rem, 8vw, 7.5rem);
+
+  line-height: 0.9;
+
+  letter-spacing: -6px;
+
+  font-weight: 900;
+}
+
+.education-hero h1 span {
+  color: #00e5ff;
+
+  text-shadow:
+    0 0 40px rgba(0, 229, 255, 0.3);
+}
+
+.education-hero p {
+  max-width: 680px;
+
+  margin: 27px auto 0;
+
+  color: #a5b1c3;
+
+  font-size: 15px;
+
+  line-height: 1.85;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.education-stats {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 34px;
+}
+
+.education-stats div {
+  min-width: 115px;
+
+  padding: 14px 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 15px;
+
+  background: rgba(5, 13, 31, 0.72);
+
+  backdrop-filter: blur(15px);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.education-stats div:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(0, 229, 255, 0.22);
+
+  background: rgba(0, 229, 255, 0.06);
+}
+
+.education-stats strong {
+  display: block;
+
+  color: #00e5ff;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 21px;
+}
+
+.education-stats small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #68768b;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   AVATAR
+========================================================= */
+
+.education-avatar {
+  position: absolute;
+
+  z-index: 8;
+
+  top: 155px;
+
+  right: 7%;
+
+  width: 270px;
+  height: 270px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.education-avatar img {
+  position: relative;
+
+  z-index: 5;
+
+  width: 245px;
+  height: 245px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 15px 30px rgba(0, 0, 0, 0.35)
+    )
+    drop-shadow(
+      0 0 35px rgba(0, 229, 255, 0.3)
+    );
+}
+
+.avatar-halo {
+  position: absolute;
+
+  width: 190px;
+  height: 190px;
+
+  border-radius: 50%;
+
+  background: #00e5ff;
+
+  filter: blur(80px);
+
+  opacity: 0.14;
+}
+
+.avatar-ring {
+  position: absolute;
+
+  border: 1px solid rgba(0, 229, 255, 0.16);
+
+  border-radius: 50%;
+}
+
+.avatar-ring-one {
+  width: 260px;
+  height: 260px;
+
+  animation: avatarOrbit 12s linear infinite;
+}
+
+.avatar-ring-two {
+  width: 210px;
+  height: 210px;
+
+  border-style: dashed;
+
+  border-color: rgba(157, 92, 255, 0.3);
+
+  animation: avatarOrbitReverse 15s linear infinite;
+}
+
+@keyframes avatarOrbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes avatarOrbitReverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.avatar-badge {
+  position: absolute;
+
+  z-index: 10;
+
+  right: -15px;
+
+  bottom: 8px;
+
+  padding: 8px 12px;
+
+  border: 1px solid rgba(0, 229, 255, 0.18);
+
+  border-radius: 10px;
+
+  background: rgba(4, 10, 25, 0.9);
+
+  color: #00e5ff;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 8px;
+
+  backdrop-filter: blur(12px);
+}
+
+.avatar-badge span {
+  display: inline-block;
+
+  width: 6px;
+  height: 6px;
+
+  margin-right: 5px;
+
+  border-radius: 50%;
+
+  background: #14f195;
+
+  box-shadow: 0 0 10px #14f195;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.education-timeline {
+  position: relative;
+
+  max-width: 1160px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 34px;
+}
+
+.timeline {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 1px;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(0, 229, 255, 0.38),
+      rgba(157, 92, 255, 0.38),
+      transparent
+    );
+}
+
+.timeline-light {
+  width: 3px;
+
+  height: 130px;
+
+  margin-left: -1px;
+
+  background:
+    linear-gradient(
+      transparent,
+      #00e5ff,
+      transparent
+    );
+
+  box-shadow:
+    0 0 20px #00e5ff;
+
+  animation:
+    timelineFlow 5s linear infinite;
+}
+
+@keyframes timelineFlow {
+  from {
+    transform: translateY(-160px);
+  }
+
+  to {
+    transform: translateY(1100px);
+  }
+}
+
+
+/* =========================================================
+   EDUCATION CARD
+========================================================= */
+
+.education-card {
+  position: relative;
+
+  width: calc(50% - 30px);
+
+  min-height: 300px;
+
+  display: grid;
+
+  grid-template-columns: 190px 1fr;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(10, 20, 43, 0.92),
+      rgba(4, 11, 27, 0.88)
+    );
+
+  backdrop-filter: blur(24px);
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.32);
+
+  transition:
+    transform 0.4s cubic-bezier(.2,.8,.2,1),
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.education-card:nth-child(even) {
+  margin-left: auto;
+}
+
+.education-card:hover {
+  transform: translateY(-9px);
+
+  border-color:
+    rgba(0, 229, 255, 0.25);
+
+  box-shadow:
+    0 35px 100px rgba(0, 0, 0, 0.42),
+    0 0 45px rgba(0, 229, 255, 0.07);
+}
+
+.card-number {
+  position: absolute;
+
+  z-index: 10;
+
+  top: 12px;
+
+  right: 15px;
+
+  color: rgba(255, 255, 255, 0.25);
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   CARD VISUAL
+========================================================= */
+
+.card-visual {
+  position: relative;
+
+  min-height: 300px;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0, 229, 255, 0.09),
+      transparent 70%
+    );
+}
+
+.visual-grid {
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.15;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 229, 255, 0.2) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 229, 255, 0.2) 1px,
+      transparent 1px
+    );
+
+  background-size: 25px 25px;
+}
+
+.visual-glow {
+  position: absolute;
+
+  width: 110px;
+  height: 110px;
+
+  border-radius: 50%;
+
+  background: #00e5ff;
+
+  filter: blur(70px);
+
+  opacity: 0.12;
+}
+
+.institution-logo-box {
+  position: relative;
+
+  z-index: 5;
+
+  width: 115px;
+  height: 115px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 17px;
+
+  border: 1px solid rgba(255, 255, 255, 0.17);
+
+  border-radius: 25px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  box-shadow:
+    0 15px 50px rgba(0, 0, 0, 0.38),
+    0 0 35px rgba(0, 229, 255, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.education-card:hover
+.institution-logo-box {
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 45px rgba(0, 229, 255, 0.13);
+}
+
+.institution-logo-box img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   ORBITS
+========================================================= */
+
+.visual-orbit {
+  position: absolute;
+
+  border: 1px solid rgba(0, 229, 255, 0.12);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.orbit-one {
+  width: 155px;
+  height: 155px;
+
+  animation:
+    rotateOrbit 12s linear infinite;
+}
+
+.orbit-two {
+  width: 190px;
+  height: 190px;
+
+  border-style: dashed;
+
+  animation:
+    rotateOrbitReverse 18s linear infinite;
+}
+
+.orbit-three {
+  width: 235px;
+  height: 235px;
+
+  opacity: 0.4;
+
+  animation:
+    rotateOrbit 25s linear infinite;
+}
+
+@keyframes rotateOrbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateOrbitReverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+
+/* =========================================================
+   ML SYMBOL
+========================================================= */
+
+.ml-symbol {
+  position: relative;
+
+  z-index: 5;
+
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(20, 241, 149, 0.25);
+
+  border-radius: 24px;
+
+  color: #14f195;
+
+  background: rgba(20, 241, 149, 0.07);
+
+  font-size: 34px;
+
+  box-shadow:
+    0 0 40px rgba(20, 241, 149, 0.12);
+}
+
+.visual-stage {
+  position: absolute;
+
+  left: 13px;
+
+  bottom: 13px;
+
+  z-index: 5;
+
+  color: #00e5ff;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 1.5px;
+}
+
+.visual-corner {
+  position: absolute;
+
+  right: 13px;
+
+  bottom: 13px;
+
+  color: #45536a;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 7px;
+}
+
+
+/* =========================================================
+   CONTENT — IMPROVED READABILITY
+========================================================= */
+
+.card-content {
+  padding: 32px 28px 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+/* META */
+
+.card-meta {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 4px;
+}
+
+.card-meta > span:first-child {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #00e5ff;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+
+/* CURRENT */
+
+.current {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  color: #14f195;
+
+  background: rgba(20, 241, 149, 0.07);
+
+  border: 1px solid rgba(20, 241, 149, 0.13);
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 7px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.8px;
+}
+
+.current i {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #14f195;
+
+  box-shadow: 0 0 10px #14f195;
+}
+
+
+/* =========================================================
+   COURSE TITLE
+========================================================= */
+
+.card-content h2 {
+  margin-top: 14px;
+
+  color: #ffffff;
+
+  font-size: 24px;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.6px;
+
+  font-weight: 750;
+
+  text-shadow:
+    0 2px 20px rgba(0, 0, 0, 0.25);
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.education-card:hover
+.card-content h2 {
+  color: #eafcff;
+
+  transform: translateX(2px);
+}
+
+
+/* =========================================================
+   INSTITUTION
+========================================================= */
+
+.card-content h3 {
+  margin-top: 9px;
+
+  color: #b69cff;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+
+  font-weight: 600;
+
+  letter-spacing: 0.05px;
+
+  transition:
+    color 0.3s ease;
+}
+
+.education-card:hover
+.card-content h3 {
+  color: #c6b2ff;
+}
+
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.location {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 11px;
+
+  color: #7f8da3;
+
+  font-size: 10px;
+
+  font-weight: 500;
+}
+
+.location svg {
+  flex-shrink: 0;
+
+  color: #00e5ff;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   DESCRIPTION — MAIN FIX
+========================================================= */
+
+.card-content p {
+  max-width: 460px;
+
+  margin-top: 17px;
+
+  color: #b2bdcc;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+
+  font-weight: 400;
+
+  letter-spacing: 0.05px;
+
+  text-wrap: pretty;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.education-card:hover
+.card-content p {
+  color: #c8d1dd;
+
+  transform: translateX(2px);
+}
+
+
+/* =========================================================
+   CARD FOOTER
+========================================================= */
+
+.card-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 22px;
+
+  padding-top: 14px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+}
+
+.layer {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #66758c;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.8px;
+}
+
+.layer svg {
+  color: #00e5ff;
+
+  font-size: 9px;
+}
+
+.card-footer a {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 7px 10px;
+
+  border:
+    1px solid
+    rgba(0, 229, 255, 0.1);
+
+  border-radius: 8px;
+
+  color: #8d9aae;
+
+  background:
+    rgba(0, 229, 255, 0.025);
+
+  text-decoration: none;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 8px;
+
+  transition:
+    all 0.3s ease;
+}
+
+.card-footer a:hover {
+  color: #00e5ff;
+
+  border-color:
+    rgba(0, 229, 255, 0.3);
+
+  background:
+    rgba(0, 229, 255, 0.07);
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 5px 20px
+    rgba(0, 229, 255, 0.06);
+}
+
+
+/* =========================================================
+   CARD COLOR ACCENTS
+========================================================= */
+
+.education-card.purple
+.visual-glow {
+  background: #9d5cff;
+}
+
+.education-card.blue
+.visual-glow {
+  background: #4d8dff;
+}
+
+.education-card.green
+.visual-glow {
+  background: #14f195;
+}
+
+
+/* =========================================================
+   END SECTION
+========================================================= */
+
+.education-end {
+  max-width: 900px;
+
+  margin: 90px auto 0;
+
+  padding: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  border:
+    1px solid
+    rgba(0, 229, 255, 0.1);
+
+  border-radius: 22px;
+
+  background:
+    rgba(5, 13, 31, 0.84);
+
+  backdrop-filter:
+    blur(20px);
+
+  box-shadow:
+    0 20px 70px
+    rgba(0, 0, 0, 0.25);
+}
+
+.end-icon {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(0, 229, 255, 0.16);
+
+  border-radius: 17px;
+
+  color: #00e5ff;
+
+  background:
+    rgba(0, 229, 255, 0.07);
+
+  font-size: 22px;
+}
+
+.education-end small {
+  color: #00e5ff;
+
+  font-family:
+    "JetBrains Mono",
+    monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+}
+
+.education-end h2 {
+  margin-top: 7px;
+
+  color: #ffffff;
+
+  font-size: 27px;
+
+  line-height: 1.25;
+}
+
+.education-end h2 span {
+  color: #9d5cff;
+}
+
+.education-end p {
+  max-width: 650px;
+
+  margin-top: 10px;
+
+  color: #929fb1;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+.end-arrow {
+  margin-left: auto;
+
+  flex-shrink: 0;
+
+  color: #00e5ff;
+
+  animation:
+    arrowMove 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowMove {
+  50% {
+    transform: translateX(7px);
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .education-avatar {
+    width: 190px;
+    height: 190px;
+
+    right: 2%;
+  }
+
+  .education-avatar img {
+    width: 175px;
+    height: 175px;
+  }
+
+  .avatar-ring-one {
+    width: 190px;
+    height: 190px;
+  }
+
+  .avatar-ring-two {
+    width: 155px;
+    height: 155px;
+  }
+}
+
+
+@media (max-width: 850px) {
+  .education-avatar {
+    position: relative;
+
+    top: auto;
+    right: auto;
+
+    margin:
+      -35px auto 55px;
+  }
+
+  .education-card {
+    width:
+      calc(50% - 15px);
+
+    grid-template-columns:
+      1fr;
+  }
+
+  .card-visual {
+    min-height:
+      210px;
+  }
+
+  .timeline {
+    display:
+      none;
+  }
+
+  .card-content p {
+    font-size:
+      13px;
+
+    line-height:
+      1.75;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .education-page {
+    padding:
+      120px 18px 70px;
+  }
+
+  .education-hero h1 {
+    font-size:
+      3.5rem;
+
+    letter-spacing:
+      -3px;
+  }
+
+  .education-hero p {
+    font-size:
+      13px;
+
+    line-height:
+      1.75;
+  }
+
+  .education-stats {
+    flex-wrap:
+      wrap;
+  }
+
+  .education-card {
+    width:
+      100%;
+  }
+
+  .data-chip {
+    display:
+      none;
+  }
+
+  .card-content {
+    padding:
+      28px 23px 23px;
+  }
+
+  .card-content h2 {
+    font-size:
+      22px;
+  }
+
+  .card-content h3 {
+    font-size:
+      12px;
+  }
+
+  .card-content p {
+    font-size:
+      13px;
+
+    line-height:
+      1.8;
+  }
+
+  .education-end {
+    flex-direction:
+      column;
+
+    align-items:
+      flex-start;
+  }
+
+  .end-arrow {
+    display:
+      none;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .education-hero h1 {
+    font-size:
+      3rem;
+  }
+
+  .education-stats div {
+    min-width:
+      90px;
+
+    padding:
+      10px;
+  }
+
+  .card-content {
+    padding:
+      24px 20px;
+  }
+
+  .card-content h2 {
+    font-size:
+      21px;
+  }
+
+  .card-content p {
+    font-size:
+      12.5px;
+
+    line-height:
+      1.8;
+  }
+
+  .card-footer {
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.01ms !important;
+  }
+}

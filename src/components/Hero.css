@@ -1,0 +1,902 @@
+/* =====================================================
+   HERO
+===================================================== */
+
+.home-page {
+  position: relative;
+
+  width: 100%;
+  height: 100svh;
+
+  min-height: 650px;
+
+  overflow: hidden;
+
+  background: #040817;
+}
+
+
+/* =====================================================
+   CONTENT WRAPPER
+===================================================== */
+
+.home-content {
+  position: relative;
+
+  z-index: 20;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+}
+
+
+/* Allow buttons/images to work */
+
+.home-content * {
+  pointer-events: auto;
+}
+
+
+/* =====================================================
+   HERO GRID
+===================================================== */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  padding:
+    82px 6% 25px;
+
+  display: grid;
+
+  grid-template-columns:
+    52% 48%;
+
+  align-items: center;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.hero-content {
+  position: relative;
+
+  z-index: 30;
+
+  width: 100%;
+
+  max-width: 700px;
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.hero-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding:
+    10px 17px;
+
+  border-radius: 50px;
+
+  color: #dce7f7;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  background:
+    rgba(8, 17, 38, 0.75);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  backdrop-filter:
+    blur(15px);
+
+  box-shadow:
+    0 10px 35px
+    rgba(0, 0, 0, 0.2);
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #14f195;
+
+  box-shadow:
+    0 0 15px
+    #14f195;
+}
+
+.status-arrow {
+  color: #00e5ff;
+}
+
+
+/* =====================================================
+   MINI TITLE
+===================================================== */
+
+.hero-mini-title {
+  margin-top: 20px;
+
+  color: #64728c;
+
+  font-family: monospace;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   MAIN TITLE
+===================================================== */
+
+.hero h1 {
+  margin-top: 12px;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(4rem, 6.5vw, 6.5rem);
+
+  font-weight: 900;
+
+  line-height: 0.9;
+
+  letter-spacing: -5px;
+}
+
+.hero h1 span:first-of-type {
+  color: #00e5ff;
+
+  text-shadow:
+    0 0 30px
+    rgba(0, 229, 255, 0.4);
+}
+
+
+/* =====================================================
+   WAVE
+===================================================== */
+
+.hero-wave {
+  display: inline-block;
+
+  margin-left: 12px;
+
+  font-size: 0.42em;
+
+  transform-origin:
+    70% 70%;
+
+  animation:
+    wave-hand 2s infinite;
+}
+
+@keyframes wave-hand {
+
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  15% {
+    transform: rotate(15deg);
+  }
+
+  30% {
+    transform: rotate(-8deg);
+  }
+
+  45% {
+    transform: rotate(13deg);
+  }
+
+  60% {
+    transform: rotate(-5deg);
+  }
+}
+
+
+/* =====================================================
+   ROLE
+===================================================== */
+
+.hero-role {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  min-height: 42px;
+
+  margin-top: 25px;
+
+  color: #c8d0df;
+
+  font-size:
+    clamp(1.25rem, 2vw, 1.8rem);
+
+  font-weight: 700;
+}
+
+.hero-role strong {
+  color: #9d5cff;
+
+  text-shadow:
+    0 0 20px
+    rgba(157, 92, 255, 0.4);
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.hero-description {
+  max-width: 620px;
+
+  margin-top: 16px;
+
+  color: #a6b0c1;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.hero-buttons {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.hero-primary,
+.hero-secondary {
+  height: 48px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    0 20px;
+
+  border-radius: 13px;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.hero-primary {
+  color: #03121a;
+
+  background:
+    linear-gradient(
+      110deg,
+      #00e5ff,
+      #6ce8ff
+    );
+
+  box-shadow:
+    0 12px 35px
+    rgba(0, 229, 255, 0.22);
+}
+
+.hero-primary:hover {
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 18px 45px
+    rgba(0, 229, 255, 0.35);
+}
+
+.hero-secondary {
+  color: #dce4f2;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.12);
+}
+
+.hero-secondary:hover {
+  color: #00e5ff;
+
+  border-color:
+    rgba(0,229,255,0.4);
+
+  transform:
+    translateY(-3px);
+}
+
+
+/* =====================================================
+   TECH PILLS
+===================================================== */
+
+.hero-tech {
+  display: flex;
+
+  gap: 7px;
+
+  flex-wrap: wrap;
+
+  margin-top: 18px;
+}
+
+.hero-tech span {
+  padding:
+    6px 11px;
+
+  border-radius: 20px;
+
+  color: #7d8aa1;
+
+  font-family: monospace;
+
+  font-size: 10px;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.07);
+}
+
+
+/* =====================================================
+   AVATAR AREA
+===================================================== */
+
+.hero-avatar-area {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  z-index: 25;
+}
+
+
+/* =====================================================
+   AVATAR GLOW
+===================================================== */
+
+.avatar-glow {
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(0, 229, 255, 0.13);
+
+  filter:
+    blur(80px);
+
+  animation:
+    avatarGlow 5s ease-in-out infinite;
+}
+
+@keyframes avatarGlow {
+
+  0%,
+  100% {
+    transform: scale(0.9);
+    opacity: 0.55;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+
+/* =====================================================
+   ROTATING RINGS
+===================================================== */
+
+.avatar-ring {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.ring-one {
+  width: 500px;
+  height: 500px;
+
+  border:
+    1px dashed
+    rgba(0,229,255,0.25);
+}
+
+.ring-two {
+  width: 380px;
+  height: 380px;
+
+  border:
+    1px dashed
+    rgba(157,92,255,0.25);
+}
+
+
+/* =====================================================
+   AVATAR
+===================================================== */
+
+.avatar-container {
+  position: relative;
+
+  z-index: 10;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.hero-avatar {
+  display: block;
+
+  width:
+    clamp(340px, 34vw, 530px);
+
+  max-height: 570px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 20px 35px
+      rgba(0,0,0,0.4)
+    )
+    drop-shadow(
+      0 0 35px
+      rgba(0,229,255,0.28)
+    );
+}
+
+
+/* =====================================================
+   FLOATING CARDS
+===================================================== */
+
+.avatar-card {
+  position: absolute;
+
+  z-index: 20;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding:
+    10px 13px;
+
+  min-width: 140px;
+
+  border-radius: 14px;
+
+  color: #e2e9f4;
+
+  background:
+    rgba(6,15,34,0.78);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.10);
+
+  backdrop-filter:
+    blur(14px);
+
+  box-shadow:
+    0 18px 40px
+    rgba(0,0,0,0.25);
+}
+
+.avatar-card > span {
+  font-size: 22px;
+}
+
+.avatar-card div {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.avatar-card small {
+  color: #66748b;
+
+  font-family: monospace;
+
+  font-size: 8px;
+}
+
+.avatar-card b {
+  margin-top: 2px;
+
+  font-size: 10px;
+}
+
+
+/* POSITIONS */
+
+.ai-card {
+  top: 18%;
+  left: 5%;
+}
+
+.mlops-card {
+  top: 48%;
+  right: 2%;
+}
+
+.python-card {
+  bottom: 17%;
+  left: 7%;
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.website-background {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+.ai-background-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  opacity: 0.72;
+}
+
+
+/* DARK OVERLAY */
+
+.background-dark-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4,8,23,0.35),
+      rgba(4,8,23,0.15),
+      rgba(4,8,23,0.30)
+    );
+}
+
+
+/* =====================================================
+   BACKGROUND GLOWS
+===================================================== */
+
+.background-glow {
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  border-radius: 50%;
+
+  filter:
+    blur(110px);
+
+  z-index: 2;
+}
+
+.glow-cyan {
+  top: -150px;
+  left: 30%;
+
+  background:
+    rgba(0,229,255,0.12);
+}
+
+.glow-purple {
+  right: -150px;
+  bottom: -150px;
+
+  background:
+    rgba(140,82,255,0.14);
+}
+
+
+/* =====================================================
+   BACKGROUND CODE
+===================================================== */
+
+.background-code {
+  position: absolute;
+
+  z-index: 3;
+
+  padding:
+    8px 13px;
+
+  border-radius: 10px;
+
+  color:
+    rgba(0,229,255,0.6);
+
+  background:
+    rgba(5,15,35,0.55);
+
+  border:
+    1px solid
+    rgba(0,229,255,0.12);
+
+  font-family: monospace;
+
+  font-size: 10px;
+
+  backdrop-filter:
+    blur(10px);
+}
+
+.code-0 {
+  top: 16%;
+  left: 15%;
+}
+
+.code-1 {
+  top: 25%;
+  right: 20%;
+}
+
+.code-2 {
+  bottom: 20%;
+  left: 13%;
+}
+
+.code-3 {
+  bottom: 30%;
+  right: 18%;
+}
+
+.code-4 {
+  top: 45%;
+  left: 43%;
+}
+
+.code-5 {
+  bottom: 13%;
+  right: 35%;
+}
+
+
+/* =====================================================
+   PARTICLES
+===================================================== */
+
+.background-particles {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 3;
+}
+
+.background-particle {
+  position: absolute;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background:
+    #00e5ff;
+
+  box-shadow:
+    0 0 12px
+    rgba(0,229,255,0.9);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+
+    height: auto;
+
+    min-height: 100svh;
+
+    padding:
+      105px 25px 40px;
+
+    text-align: center;
+
+    overflow-y: auto;
+  }
+
+  .hero-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 4.3rem;
+
+    letter-spacing: -4px;
+  }
+
+  .hero-role {
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+
+  .hero-description {
+    max-width: 560px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-tech {
+    justify-content: center;
+  }
+
+  .hero-avatar-area {
+    height: 430px;
+
+    min-height: 430px;
+  }
+
+  .hero-avatar {
+    width: 320px;
+  }
+
+  .ring-one {
+    width: 360px;
+    height: 360px;
+  }
+
+  .ring-two {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .hero {
+    padding:
+      95px 18px 30px;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .hero-avatar-area {
+    height: 350px;
+
+    min-height: 350px;
+  }
+
+  .hero-avatar {
+    width: 280px;
+  }
+
+  .avatar-card {
+    transform: scale(0.8);
+  }
+
+  .ai-card {
+    left: 0;
+  }
+
+  .mlops-card {
+    right: 0;
+  }
+
+  .python-card {
+    left: 0;
+  }
+}

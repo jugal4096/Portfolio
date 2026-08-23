@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Inter, sans-serif;
+
+  background: #050816;
+
+  overflow-x: hidden;
+
+  color: white;
+}
+
+button {
+  font-family: inherit;
+}
