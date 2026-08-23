@@ -15,6 +15,8 @@ export default function Hero() {
 
       <div className="hero-content">
 
+        {/* STATUS */}
+
         <motion.div
           className="hero-status"
           initial={{ opacity: 0, y: 20 }}
@@ -31,6 +33,8 @@ export default function Hero() {
         </motion.div>
 
 
+        {/* MINI TITLE */}
+
         <motion.div
           className="hero-mini-title"
           initial={{ opacity: 0, x: -20 }}
@@ -40,6 +44,8 @@ export default function Hero() {
           BUILD • TRAIN • DEPLOY • REPEAT
         </motion.div>
 
+
+        {/* MAIN HEADING */}
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -61,6 +67,8 @@ export default function Hero() {
         </motion.h1>
 
 
+        {/* ROLE */}
+
         <motion.div
           className="hero-role"
           initial={{ opacity: 0, y: 15 }}
@@ -73,7 +81,6 @@ export default function Hero() {
           </span>
 
           <strong>
-
             <Typewriter
               words={[
                 "Artificial Intelligence.",
@@ -89,11 +96,12 @@ export default function Hero() {
               deleteSpeed={35}
               delaySpeed={1300}
             />
-
           </strong>
 
         </motion.div>
 
+
+        {/* DESCRIPTION */}
 
         <motion.p
           className="hero-description"
@@ -116,7 +124,9 @@ export default function Hero() {
         </motion.p>
 
 
-        {/* BUTTONS */}
+        {/* =========================================
+            BUTTONS
+        ========================================= */}
 
         <motion.div
           className="hero-buttons"
@@ -133,6 +143,8 @@ export default function Hero() {
           }}
         >
 
+          {/* EXPLORE */}
+
           <Link
             to="/about"
             className="hero-primary"
@@ -141,20 +153,29 @@ export default function Hero() {
           </Link>
 
 
-          {/* RESUME DOWNLOAD */}
+          {/* DOWNLOAD RESUME */}
 
           <a
             href="/Jugal-Pakhare-Resume.pdf"
             download="Jugal-Pakhare-Resume.pdf"
-            className="secondary resume-button"
+            className="hero-resume"
+            aria-label="Download Jugal Pakhare Resume"
           >
-            📄 Download Resume
+            <span className="resume-icon">
+              📄
+            </span>
+
+            <span>
+              Download Resume
+            </span>
           </a>
 
         </motion.div>
 
 
-        {/* TECH STACK */}
+        {/* =========================================
+            TECH STACK
+        ========================================= */}
 
         <motion.div
           className="hero-tech"
@@ -182,12 +203,12 @@ export default function Hero() {
 
       <div className="hero-avatar-area">
 
-        {/* Glow */}
+        {/* GLOW */}
 
         <div className="avatar-glow" />
 
 
-        {/* Rotating rings */}
+        {/* ROTATING RING 1 */}
 
         <motion.div
           className="avatar-ring ring-one"
@@ -200,6 +221,9 @@ export default function Hero() {
             ease: "linear",
           }}
         />
+
+
+        {/* ROTATING RING 2 */}
 
         <motion.div
           className="avatar-ring ring-two"
@@ -214,7 +238,7 @@ export default function Hero() {
         />
 
 
-        {/* Avatar */}
+        {/* AVATAR */}
 
         <motion.div
           className="avatar-container"
@@ -256,7 +280,9 @@ export default function Hero() {
         </motion.div>
 
 
-        {/* Floating AI card */}
+        {/* =========================================
+            AI CARD
+        ========================================= */}
 
         <motion.div
           className="avatar-card ai-card"
@@ -266,18 +292,23 @@ export default function Hero() {
           transition={{
             duration: 3,
             repeat: Infinity,
+            ease: "easeInOut",
           }}
         >
+
           <span>🧠</span>
 
           <div>
             <small>AI MODEL</small>
             <b>TRAINING</b>
           </div>
+
         </motion.div>
 
 
-        {/* MLOps card */}
+        {/* =========================================
+            MLOPS CARD
+        ========================================= */}
 
         <motion.div
           className="avatar-card mlops-card"
@@ -287,18 +318,23 @@ export default function Hero() {
           transition={{
             duration: 3.8,
             repeat: Infinity,
+            ease: "easeInOut",
           }}
         >
+
           <span>⚙️</span>
 
           <div>
             <small>MLOPS</small>
             <b>PIPELINE ONLINE</b>
           </div>
+
         </motion.div>
 
 
-        {/* Python card */}
+        {/* =========================================
+            PYTHON CARD
+        ========================================= */}
 
         <motion.div
           className="avatar-card python-card"
@@ -308,14 +344,17 @@ export default function Hero() {
           transition={{
             duration: 4,
             repeat: Infinity,
+            ease: "easeInOut",
           }}
         >
+
           <span>🐍</span>
 
           <div>
             <small>RUNTIME</small>
             <b>PYTHON</b>
           </div>
+
         </motion.div>
 
       </div>
