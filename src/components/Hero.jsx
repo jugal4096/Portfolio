@@ -156,8 +156,8 @@ export default function Hero() {
           {/* DOWNLOAD RESUME */}
 
           <a
-            href="/Jugal-Pakhare-Resume.pdf"
-            download="Jugal-Pakhare-Resume.pdf"
+            href="/Resume26_27.pdf"
+            download="Resume26_27.pdf"
             className="hero-resume"
             aria-label="Download Jugal Pakhare Resume"
           >
